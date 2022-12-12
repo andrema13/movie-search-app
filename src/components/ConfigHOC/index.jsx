@@ -6,7 +6,7 @@ const config = (Component) => (props) => {
     `${process.env.REACT_APP_API_BASE_URL}/configuration`
   );
 
-  return data && <Component role={"alert"} {...props} config={data} />;
+  return data && <Component {...props} config={data} />;
 };
 
 export default config;
