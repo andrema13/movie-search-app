@@ -12,7 +12,12 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
+        index: true,
+        element: <Discover />,
+      },
+      {
         path: "discover",
+        index: true,
         element: <Discover />,
       },
       {
@@ -20,6 +25,10 @@ const router = createBrowserRouter([
         element: <MovieDetails />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <Discover />,
   },
 ]);
 
