@@ -1,0 +1,60 @@
+@use "../../variables";
+
+.movie-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: variables.$dark-grey 0 0.1em 0.3em;
+  border-radius: 0.5em;
+  position: relative;
+
+  &__back-button {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    border-radius: 0.5em;
+    box-shadow: variables.$dark-grey 0 0.1em 0.3em;
+    padding: 0.5em;
+    background-color: variables.$grey;
+    color: black;
+  }
+
+  &__backdrop-image {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 0.5em 0.5em 0 0;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 0 2em 2em 3em;
+
+    &__title {
+      text-align: start;
+    }
+
+    &__overview {
+      max-width: 42em;
+    }
+
+    &__activity {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media only screen and (min-width: 576px) {
+      &__activity {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: smaller;
+      }
+    }
+  }
+}
