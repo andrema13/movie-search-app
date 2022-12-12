@@ -1,0 +1,17 @@
+@use "../../variables";
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+
+  &__input {
+    padding: 1em;
+    border-radius: 0.5em;
+
+    &::placeholder {
+      color: variables.$dark-blue;
+      text-align: center;
+    }
+  }
+}
