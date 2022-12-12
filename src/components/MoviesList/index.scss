@@ -1,0 +1,10 @@
+@use "../../variables";
+
+.movies-list {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    text-align: start;
+  }
+}
